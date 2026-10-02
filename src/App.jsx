@@ -1,14 +1,14 @@
-import Card from './components/Card'
-import Answer from './components/Answer'
+import Hero from "./Hero.jsx"
+
+function Header() {
+  return <h1>Danielle ER </h1>
+}
 
 function App() {
   return (
     <div>
-      <Card />
-      <div className="flex gap-2 justify-center mt-6">
-        <Answer label="Option A" />
-        <Answer label="Option B" />
-      </div>
+      <Header />
+      <p>Pokémon trainer from Pallet Town.</p>
     </div>
   )
 }
