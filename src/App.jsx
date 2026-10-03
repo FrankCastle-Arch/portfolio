@@ -12,16 +12,18 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center gap-8">
-      <Header />
-      <Hero />
-      <Greeting />
-      <Intro />
-      <GitHubLink />
-      <Fortune />
-      <TipSection />
-      <Greeting message="and thanks for stopping by!" showExtras={false} />
-      <Footer />
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 flex flex-col items-center gap-8">
+        <Header />
+        <Hero />
+        <Greeting />
+        <Intro />
+        <GitHubLink />
+        <Fortune />
+        <TipSection />
+        <Greeting message="and thanks for stopping by!" showExtras={false} />
+        <Footer />
+      </div>
     </div>
   )
 }
