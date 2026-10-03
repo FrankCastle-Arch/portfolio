@@ -9,6 +9,7 @@ import GitHubLink from './components/GitHubLink'
 import Fortune from './components/Fortune'
 import TipSection from './components/TipSection.jsx'
 import Footer from './components/Footer'
+import DataPlaylistPortfolioCard from './DataPlaylistPortfolioCard.jsx'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <GitHubLink />
         <Fortune />
         <TipSection />
+        <DataPlaylistPortfolioCard />
         <Greeting message="and thanks for stopping by!" showExtras={false} />
         <Footer />
       </div>
