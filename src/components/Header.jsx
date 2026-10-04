@@ -1,8 +1,11 @@
 
 function Header() {
   return (
-  <header className="p-4 bg-purple-600 text-white">
-      <h1>My Portfolio</h1>
+ <header className="text-center">
+      <h1 className="font-mono text-4xl md:text-5xl font-bold text-black-600">
+        console.log("Danielle")
+      </h1>
+      <p className="mt-2 font-mono text-lg text-black-500">returns: undefined</p>
     </header>
   )
 }

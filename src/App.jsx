@@ -14,18 +14,28 @@ import Projects from './components/Projects.jsx'
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 flex flex-col items-center gap-8">
-        <Header />
-        <Hero />
-        <Greeting />
-        <Intro />
-        <GitHubLink />
-        <Fortune />
-        <TipSection />
-        <Projects />
-        <Greeting message="and thanks for stopping by!" showExtras={false} />
-        <Footer />
+      <div className="container mx-auto px-4 py-10 flex flex-col gap-8">
+
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="w-full md:w-1/2 flex flex-col gap-6">
+            <Header />
+            <Intro />
+          </div>
+          <div className="w-full md:w-1/2 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+            <Hero />
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-8">
+          <Greeting />
+          <GitHubLink />
+          <Projects />
+          <Fortune />
+          <TipSection />
+        </div>
+
       </div>
+      <Footer />
     </div>
   )
 }
