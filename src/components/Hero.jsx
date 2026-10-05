@@ -1,4 +1,5 @@
 import imageUrl from '../image-url.js'
+import './hero.css'
 
 function Hero() {
   const src = imageUrl(1200, 500)

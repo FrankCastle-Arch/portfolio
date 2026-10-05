@@ -10,6 +10,8 @@ import Fortune from './components/Fortune.jsx'
 import TipSection from './components/TipSection.jsx'
 import Footer from './components/Footer.jsx'
 import Projects from './components/Projects.jsx'
+import Navbar from './components/Navbar.jsx'
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
 
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2 flex flex-col gap-6">
+            <Navbar /> 
             <Header />
             <Intro />
           </div>
@@ -28,10 +31,13 @@ function App() {
 
         <div className="flex flex-col items-center gap-8">
           <Greeting />
+        <div className="flex justify-center">
           <GitHubLink />
+        </div>
           <Projects />
           <Fortune />
           <TipSection />
+          <Contact />
         </div>
 
       </div>

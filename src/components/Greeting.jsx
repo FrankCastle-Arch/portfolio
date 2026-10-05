@@ -41,13 +41,13 @@ function Greeting({ message = "and welcome to my portfolio.", showExtras = true 
 
   return (
     <div className="text-center space-y-2">
-      <p className="text-3xl md:text-5xl font-bold text-purple-600">
+      <p className="text-3xl md:text-5xl font-mono font-mono font-bold text-black-600">
         {greeting}, {message}
       </p>
       {showExtras && (
         <>
-          <p className="text-xl text-gray-600">Hope you're having a lovely {season}.</p>
-          {holiday && <p className="text-xl font-semibold text-pink-500">{holiday}</p>}
+          <p className="text-lg font-mono text-gray-600">Hope you're having a lovely {season}.</p>
+          {holiday && <p className="text-lg font-semibold text-blue-500">{holiday}</p>}
         </>
       )}
     </div>
