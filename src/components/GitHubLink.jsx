@@ -1,6 +1,6 @@
 function GitHubLink() {
-  let url = "https://github.com/FrankCastle-Arch"
-  let label = "My GitHub"
+  const url = "https://github.com/FrankCastle-Arch"
+  const label = "My GitHub"
   return (
     
     <a
