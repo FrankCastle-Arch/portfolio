@@ -18,6 +18,11 @@ A React site that shows the projects I built in Level 2.
 
 -
 
+## Photo Attribution 
+
+Campbells Tomato Soup Can by https://unsplash.com/@girlwithredhat
+
+
 ## Built with
 
 React, Vite, Bun, and Tailwind CSS.

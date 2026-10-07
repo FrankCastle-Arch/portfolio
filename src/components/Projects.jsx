@@ -27,7 +27,7 @@ function Projects() {
           name="Reel Knowledge"
           description="A movie quiz with four questions, a score, and a reset button for anyone who'd like to pretend the first attempt didn't happen."
           liveUrl="https://frankcastle-arch.github.io/click-lab/"
-          repoUrl="https://github.com/FrankCastle-Arch/project-three"
+          repoUrl="https://github.com/FrankCastle-Arch/click-lab"
         />
       </div>
     </section>
