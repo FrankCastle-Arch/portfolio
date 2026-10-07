@@ -20,7 +20,7 @@ A React site that shows the projects I built in Level 2.
 
 ## Photo Attribution 
 
-Campbells Tomato Soup Can by https://unsplash.com/@girlwithredhat
+Campbells Tomato Soup Can by <a href="https://unsplash.com/@girlwithredhat">Girl with Red Hat</a> from  <a href="https://unsplash.com/">Unsplash</a>
 
 
 ## Built with
