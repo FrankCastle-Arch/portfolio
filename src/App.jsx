@@ -10,72 +10,92 @@ import DataPlaylistPortfolioCard from './DataPlaylistPortfolioCard.jsx'
 import GreetingCardGeneratorPortfolioCard from './GreetingCardGeneratorPortfolioCard.jsx'
 import './flex-container.css'
 
+function Greeting() {
+  return <h2>Hello! I'm Danielle</h2>
+}
+
+function ClickLabPortfolioCard() {
+  return (
+    <div className="card">
+      <h3>Click Lab</h3>
+      <p>Interactive front-end experiments.</p>
+    </div>
+  )
+}
+
 function App() {
+  const [light, setLight] = useState('off')
+  const [sat, setSat] = useState(0)
+  const days = ['Monday', 'Tuesday', 'Wednesday']
+  const [index, setIndex] = useState(0)
+
+  const turnOn = () => setLight('on')
+  const turnOff = () => setLight('off')
+
+  const showColor = () => setSat(0)
+  const showBlackAndWhite = () => setSat(-100)
+  const showSomeColor = () => setSat(-50)
+
+  const nextDay = () => {
+    if (index < days.length - 1) {
+      setIndex(index + 1)
+    }
+  }
+
+  const previousDay = () => {
+    if (index > 0) {
+      setIndex(index - 1)
+    }
+  }
+
+  const imageUrl = (width, height, satValue) =>
+    `https://images.unsplash.com/photo-1672671187899-a10f547341f1?auto=format&fit=crop&w=${width}&h=${height}&sat=${satValue}`
+
+  const src = imageUrl(600, 250, sat)
+  let look = ''
+
+  if (index === days.length - 1) {
+    look = 'last'
+  }
+
   return (
     <div className="container">
       <Header />
       <Hero />
+      <Greeting />
       <p>Pokémon trainer from Pallet Town.</p>
       <p>Pikachu uses Thunderbolt.</p>
       <p className="shout">It's super effective!</p>
-       <Fortune />
-       <DataPlaylistPortfolioCard />
-      <Footer />
+      <Fortune />
+      <Tip />
+      <GitHubLink />
+      <p>Here are some of my projects:</p>
+      <div className="flex-container">
+        <DataPlaylistPortfolioCard />
+        <GreetingCardGeneratorPortfolioCard />
+        <ClickLabPortfolioCard />
+      </div>
+
+      <div>
+        <p>The light is {light}.</p>
+        <button onClick={turnOn}>On</button>
+        <button onClick={turnOff}>Off</button>
+      </div>
+
+      <div>
+        <img src={src} alt="basan" />
+        <button onClick={showColor}>Color</button>
+        <button onClick={showBlackAndWhite}>Black and White</button>
+        <button onClick={showSomeColor}>Some Color</button>
+      </div>
+
+      <div>
+        <p className={look}>{days[index]}</p>
+        <button onClick={previousDay}>Previous</button>
+        <button onClick={nextDay}>Next</button>
+      </div>
     </div>
   )
 }
-
-function App() {
-  const [light, setLight] = useState("off")
-
-  const turnOn = () => {
-    setLight("on")
-  }
-
-  const turnOff = () => {
-    setLight("off")
-  }
-
-  return (
-    <div>
-      <p>The light is {light}.</p>
-      <button onClick={turnOn}>On</button>
-      <button onClick={turnOff}>Off</button>
-    </div>
-  )
-}
-
-const imageUrl = (width, height, sat) =>
-  "https://images.unsplash.com/photo-1672671187899-a10f547341f1" + width + "&h=" + height + "&fit=crop&auto=format&sat=" + sat
-
-function App() {
-  const [sat, setSat] = useState(0)
-
-  const showColor = () => {
-    setSat(0)
-  }
-
-  const showBlackAndWhite = () => {
-    setSat(-100)
-  }
-
-    const showSomeColor = () => {
-    setSat(-50)
-  }
-
-  const src = imageUrl(600, 250, sat)
-  return (
-    <div>
-      <img src={src} alt="Flowers in a clay vase" />
-      <button onClick={showColor}>Color</button>
-      <button onClick={showBlackAndWhite}>Black and White</button>
-      <button onClick={showSomeColor}>Some Color</button>    
-    </div>
-  )
-}
-
-
-
-
 
 export default App

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import heroPhoto from './hero-photo.js'
+import heroPhoto from './heroPhoto.js'
 import './hero.css'
 
 
@@ -36,6 +36,23 @@ function Hero() {
     setSat(-100)
   }
 
+    const showFirst = () => {
+    setIndex(0)
+  }
+
+  const showSecond = () => {
+    setIndex(1)
+  }
+
+  const showThird = () => {
+    setIndex(2)
+  }
+
+  const resetHero = () => {
+    setIndex(0)
+    setSat(0)
+  }
+
   const { id, description } = photos[index]
   const [src, alt] = heroPhoto({ photo: id, width: 1200, height: 500, sat, description })
   return (
@@ -48,6 +65,10 @@ function Hero() {
         <button onClick={nextPhoto}>Next</button>
         <button onClick={showColor}>Color</button>
         <button onClick={showBlackAndWhite}>Black and White</button>
+        <button onClick={showFirst}>First</button>
+        <button onClick={showSecond}>Second</button>
+        <button onClick={showThird}>Third</button>
+        <button onClick={resetHero}>Reset</button>
       </p>
     </div>
   )

@@ -2,7 +2,10 @@
 | --- | --- | --- | --- | ---|
 | `Hero` | my hero photo | `heroPhoto`, which calls `imageUrl` | whether the photo is in color | color and black and white buttons on my hero, a new fortune button, a Like button on every card |
 | `Fortune` | a random fortune | a list and `randomNumber` | which fortune is showing |
-| `DataPlaylistPortfolioCard` | one project: its name, description, and two links | variables inside the component | its likes |
+| `DataPlaylistPortfolioCard` | one project: its name, description, and two links | variables inside the component | its likes | |  |  `ClickLabPortfolioCard`
+| `GreetingCardGeneratorPortfolioCard` | one project: its name, description, and two links | variables inside the component | its likes |  
+|  `ClickLabPortfolioCard`
+one project: its name, description, and two links | variables inside the component | its likes |
 
 
 
