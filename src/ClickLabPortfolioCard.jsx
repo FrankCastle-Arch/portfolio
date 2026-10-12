@@ -3,7 +3,7 @@ import { useState } from 'react'
 function ClickLabPortfolioCard() {
   const project = { 
       name: "Click Lab",
-      description: "A page of buttons that count, change, and react to clicks.",
+      description: "A quiz game with interactive buttons that count, change, and react to clicks.",
       details: "I built it in Level 2 to practice click listeners and the counter pattern.",
       liveUrl: "https://FrankCastle-Arch.github.io/click-lab/",
       repoUrl: "https://github.com/FrankCastle-Arch/click-lab"

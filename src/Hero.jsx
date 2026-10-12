@@ -3,12 +3,13 @@ import heroPhoto from './heroPhoto.js'
 import './hero.css'
 
 
-function Hero() {
   const photos = [
     { id: "photo-1672671187899-a10f547341f1", description: "basan" },
     { id: "photo-1723707959328-4106c2a3854d", description: "train" },
     { id: "photo-1596785236251-71fa49ac5760", description: "city streets" },
   ]
+
+function Hero() {
   const [index, setIndex] = useState(0)
   const [sat, setSat] = useState(0)
   const [sepia, setSepia] = useState(0)
@@ -60,11 +61,13 @@ function Hero() {
   const resetHero = () => {
     setIndex(0)
     setSat(0)
+    setSepia(0)
   }
 
   const { id, description } = photos[index]
   const caption = `Photo ${index + 1} of ${photos.length}: ${description}`
-  const [src, alt] = heroPhoto({ photo: photos[index], width: 1200, height: 500, sat, description: descriptions[index], })
+  const [src, alt] = heroPhoto({ photo: id, width: 1000, height: 1000, sat, sepia, description })
+  
   return (
     <div>
       <div className="hero">
