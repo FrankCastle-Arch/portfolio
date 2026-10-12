@@ -1,11 +1,13 @@
 import { useState } from 'react'
 
 function DataPlaylistPortfolioCard() {
-      let name = "Data Playlist"
-      let description = "A playlist page that loads its songs from my own data API."
-      let details = "I built it in Level 2 to practice fetching data from an API and displaying it in a React component."
-      let liveUrl = "https://FrankCastle-Arch.github.io/data-playlist/"
-      let repoUrl = "https://github.com/FrankCastle-Arch/data-playlist"
+  const project = { 
+      name: "Data Playlist",
+      description: "A playlist page that loads its songs from my own data API.",
+      details: "I built it in Level 2 to practice fetching data from an API and displaying it in a React component.",
+      liveUrl: "https://FrankCastle-Arch.github.io/data-playlist/",
+      repoUrl: "https://github.com/FrankCastle-Arch/data-playlist"
+}
 
 const [likes, setLikes] = useState(0)
 const [open, setOpen] = useState(false)
@@ -28,7 +30,7 @@ if (open) {
     label = "Show Less"
   }
 
-    let look = "outline"
+  let look = "outline"
   if (open) {
     look = ""
   }

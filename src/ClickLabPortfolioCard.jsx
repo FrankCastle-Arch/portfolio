@@ -1,11 +1,13 @@
 import { useState } from 'react'
 
 function ClickLabPortfolioCard() {
-      let name = "Click Lab"
-      let description = "A page of buttons that count, change, and react to clicks."
-      let details = "I built it in Level 2 to practice click listeners and the counter pattern."
-      let liveUrl = "https://FrankCastle-Arch.github.io/click-lab/"
-      let repoUrl = "https://github.com/FrankCastle-Arch/click-lab"
+  const project = { 
+      name: "Click Lab",
+      description: "A page of buttons that count, change, and react to clicks.",
+      details: "I built it in Level 2 to practice click listeners and the counter pattern.",
+      liveUrl: "https://FrankCastle-Arch.github.io/click-lab/",
+      repoUrl: "https://github.com/FrankCastle-Arch/click-lab"
+    }
 
 const [likes, setLikes] = useState(0)
 const [open, setOpen] = useState(false)
@@ -28,10 +30,10 @@ if (open) {
     label = "Show Less"
 }
 
-  let look = "outline"
-  if (open) {
+let look = "outline"
+if (open) {
     look = ""
-  }
+}
 
 return (
     <article>

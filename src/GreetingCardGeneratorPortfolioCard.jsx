@@ -1,11 +1,13 @@
 import { useState } from 'react'
 
 function GreetingCardGeneratorPortfolioCard() {
-      let name = "GreetingCardGenerator"
-      let description = "A mad libs style greeting card generator that uses a form to collect user input and then displays the completed greeting card."
-      let details = "I built it in Level 2 to practice form handling and dynamic content rendering."
-      let liveUrl = "https://FrankCastle-Arch.github.io/GreetingCardGenerator/"
-      let repoUrl = "https://github.com/FrankCastle-Arch/GreetingCardGenerator" 
+  const project = { 
+      name: "Greeting Card Generator",
+      description: "A mad libs style greeting card generator that uses a form to collect user input and then displays the completed greeting card.",
+      details: "I built it in Level 2 to practice form handling and dynamic content rendering.",
+      liveUrl: "https://FrankCastle-Arch.github.io/GreetingCardGenerator/",
+      repoUrl: "https://github.com/FrankCastle-Arch/GreetingCardGenerator"
+    }
 
   const [likes, setLikes] = useState(0)
   const [open, setOpen] = useState(false)
@@ -28,7 +30,7 @@ function GreetingCardGeneratorPortfolioCard() {
     label = "Show Less"
   }
 
-    let look = "outline"
+  let look = "outline"
   if (open) {
     look = ""
   }
