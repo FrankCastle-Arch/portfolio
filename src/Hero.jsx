@@ -11,6 +11,8 @@ function Hero() {
   ]
   const [index, setIndex] = useState(0)
   const [sat, setSat] = useState(0)
+  const [sepia, setSepia] = useState(0)
+
 
   const nextPhoto = () => {
     if (index === photos.length - 1) {
@@ -35,6 +37,13 @@ function Hero() {
   const showBlackAndWhite = () => {
     setSat(-100)
   }
+    const addSepia = () => {
+    setSepia(80)
+  }
+
+  const removeSepia = () => {
+    setSepia(0)
+  }
 
     const showFirst = () => {
     setIndex(0)
@@ -54,7 +63,7 @@ function Hero() {
   }
 
   const { id, description } = photos[index]
-  const [src, alt] = heroPhoto({ photo: id, width: 1200, height: 500, sat, description })
+  const [src, alt] = heroPhoto({ photo: photos[index], width: 1200, height: 500, sat, description: descriptions[index], })
   return (
     <div>
       <div className="hero">
@@ -65,6 +74,8 @@ function Hero() {
         <button onClick={nextPhoto}>Next</button>
         <button onClick={showColor}>Color</button>
         <button onClick={showBlackAndWhite}>Black and White</button>
+        <button onClick={addSepia}>Sepia</button>
+        <button onClick={removeSepia}>No Sepia</button>
         <button onClick={showFirst}>First</button>
         <button onClick={showSecond}>Second</button>
         <button onClick={showThird}>Third</button>
