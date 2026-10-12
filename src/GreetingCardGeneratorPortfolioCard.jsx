@@ -22,7 +22,7 @@ function GreetingCardGeneratorPortfolioCard() {
 
   let text = project.description
   if (open) {
-    text = project.description + " " + project.details
+    text = `${project.description} ${project.details}`
   }
 
   let label = "Show More"

@@ -7,7 +7,7 @@ function ClickLabPortfolioCard() {
       details: "I built it in Level 2 to practice click listeners and the counter pattern.",
       liveUrl: "https://FrankCastle-Arch.github.io/click-lab/",
       repoUrl: "https://github.com/FrankCastle-Arch/click-lab"
-    }
+}
 
 const [likes, setLikes] = useState(0)
 const [open, setOpen] = useState(false)
@@ -22,7 +22,7 @@ const toggleOpen = () => {
 
 let text = project.description
 if (open) {
-    text = project.description + " " + project.details
+    text = `${project.description} ${project.details}`
 }
 
 let label = "Show More"

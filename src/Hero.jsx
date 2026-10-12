@@ -63,12 +63,14 @@ function Hero() {
   }
 
   const { id, description } = photos[index]
+  const caption = `Photo ${index + 1} of ${photos.length}: ${description}`
   const [src, alt] = heroPhoto({ photo: photos[index], width: 1200, height: 500, sat, description: descriptions[index], })
   return (
     <div>
       <div className="hero">
         <img src={src} alt={alt} />
       </div>
+      <p>{caption}</p>
       <p>
         <button onClick={previousPhoto}>Previous</button>
         <button onClick={nextPhoto}>Next</button>

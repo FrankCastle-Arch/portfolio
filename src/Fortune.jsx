@@ -6,9 +6,10 @@ const randomNumber = (min, max) => {
 
 function Fortune() {
   const fortunes = [
-    'Ask again later',
-    "Don't go home!",
-    'Today seems unlucky'
+    { text: "Ask again later", author: "Anonymous" },
+    { text: "Don't go home!", author: "Anonymous" },
+    { text: "Today seems unlucky", author: "Anonymous" },
+    { text: "You will have a great day!", author: "Anonymous" },
   ]
 
   const [index, setIndex] = useState(randomNumber(0, fortunes.length - 1))
@@ -17,9 +18,13 @@ function Fortune() {
     setIndex(randomNumber(0, fortunes.length - 1))
   }
 
+  const { text, author } = fortunes[index]
+
+
 return (
   <div>
-    <p>{fortunes[index]}</p>
+    <p>{text}</p>
+    <p><small>{author}</small></p>
     <button onClick={newFortune}>New Fortune</button>
   </div>
 )
