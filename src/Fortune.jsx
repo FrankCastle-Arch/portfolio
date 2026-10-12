@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const randomNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min
+  Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 function Fortune() {
@@ -12,19 +12,17 @@ function Fortune() {
   ]
 
   const [index, setIndex] = useState(randomNumber(0, fortunes.length - 1))
-
+  
   const newFortune = () => {
     setIndex(randomNumber(0, fortunes.length - 1))
   }
 
-  return (
-    <article>
-      <div>
-        <p>{fortunes[index]}</p>
-        <button onClick={newFortune}>Try Again!</button>
-      </div>
-    </article>
-  )
+return (
+  <div>
+    <p>{fortunes[index]}</p>
+    <button onClick={newFortune}>New Fortune</button>
+  </div>
+)
 }
 
 export default Fortune

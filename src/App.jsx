@@ -25,41 +25,54 @@ function App() {
   )
 }
 
+function App() {
+  const [light, setLight] = useState("off")
 
+  const turnOn = () => {
+    setLight("on")
+  }
 
+  const turnOff = () => {
+    setLight("off")
+  }
 
+  return (
+    <div>
+      <p>The light is {light}.</p>
+      <button onClick={turnOn}>On</button>
+      <button onClick={turnOff}>Off</button>
+    </div>
+  )
+}
 
+const imageUrl = (width, height, sat) =>
+  "https://images.unsplash.com/photo-1672671187899-a10f547341f1" + width + "&h=" + height + "&fit=crop&auto=format&sat=" + sat
 
-//const imageUrl = (width, height, sat) =>
-  //"https://images.unsplash.com/photo-1789948731559-5d113d8744b6?w=" + width + "&h=" + height + "&fit=crop&auto=format&sat=" + sat
+function App() {
+  const [sat, setSat] = useState(0)
 
+  const showColor = () => {
+    setSat(0)
+  }
 
+  const showBlackAndWhite = () => {
+    setSat(-100)
+  }
 
-//function App() {
-  //const [count, setCount] = useState(0)
+    const showSomeColor = () => {
+    setSat(-50)
+  }
 
-//  const addOne = () => {
-//     setCount(count + 1)  
-  //}
-//
-  //  const subtractOne = () => {
-    //  setCount(count - 1)
-  //}
-
-//    const reset = () => {
-  //    setCount(0)
-  //}
-
-  //}
-  //return (
-    //<div>
-      //<p>Count: {count}</p>
-      //<button onClick={addOne}>Add One</button>
-      //<button onClick={subtractOne}>Subtract One</button>
-      //<button onClick={reset}>Reset</button>
-    //</div>
-   // )    
-//}     
+  const src = imageUrl(600, 250, sat)
+  return (
+    <div>
+      <img src={src} alt="Flowers in a clay vase" />
+      <button onClick={showColor}>Color</button>
+      <button onClick={showBlackAndWhite}>Black and White</button>
+      <button onClick={showSomeColor}>Some Color</button>    
+    </div>
+  )
+}
 
 
 

@@ -1,5 +1,22 @@
-.note {
-  border: 2px solid #f2c94c;
+.on {
+  background-color: #fff3b0;
+  color: #1b1b1b;
   padding: 1rem;
 }
 
+.off {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  padding: 1rem;
+}
+
+.dim {
+  background-color: #6b6b6b;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
