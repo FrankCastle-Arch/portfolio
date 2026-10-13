@@ -30,13 +30,12 @@ function App() {
         <br />
         <div className="flex flex-col items-center gap-8">
           <Greeting />
+          <GitHubLink />
         <div className="flex justify-center">
         </div>
           <Projects />
           <Contact />
-          <GitHubLink />
         </div>
-
       </div>
       <Footer />
     </div>
