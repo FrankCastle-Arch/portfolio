@@ -1,12 +1,15 @@
 import { useState } from 'react'
+import LikeButton from './LikeButton.jsx'
+
 
 function GreetingCardGeneratorPortfolioCard() {
   const project = { 
-      name: "Greeting Card Generator",
+      name: "Card-o-Matic",
       description: "A mad libs style greeting card generator that uses a form to collect user input and then displays the completed greeting card.",
       details: "I built it in Level 2 to practice form handling and dynamic content rendering.",
-      liveUrl: "https://FrankCastle-Arch.github.io/GreetingCardGenerator/",
-      repoUrl: "https://github.com/FrankCastle-Arch/GreetingCardGenerator"
+      liveUrl: "https://FrankCastle-Arch.github.io/greeting-card-generator/",
+      repoUrl: "https://github.com/FrankCastle-Arch/greeting-card-generator",
+      status: "live"
     }
 
   const [likes, setLikes] = useState(0)
@@ -44,7 +47,7 @@ function GreetingCardGeneratorPortfolioCard() {
       <p>
         <a href={project.liveUrl}>See it live</a> · <a href={project.repoUrl}>Read the code</a>
       </p>
-      <button onClick={addLike}>Like {likes}</button>
+      <LikeButton likes={likes} onLike={addLike} />
     </article>
   )
 }

@@ -11,6 +11,12 @@ import PhotoControls from './PhotoControls.jsx'
     { id: "photo-1596785236251-71fa49ac5760", description: "city streets" },
   ]
 
+  const resetHero = () => {
+    setIndex(0)
+    setSat(0)
+  }
+
+
 function Hero() {
   const [index, setIndex] = useState(0)
   const [sat, setSat] = useState(0)
@@ -82,6 +88,7 @@ function Hero() {
           onPrevious={previousPhoto}
           onColor={showColor}
           onBlackAndWhite={showBlackAndWhite}
+          onReset={resetHero}
         />
       
       </p>
