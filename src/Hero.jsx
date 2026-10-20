@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import heroPhoto from './heroPhoto.js'
 import './hero.css'
+import PhotoControls from './PhotoControls.jsx'
+
 
 
   const photos = [
@@ -75,16 +77,13 @@ function Hero() {
       </div>
       <p>{caption}</p>
       <p>
-        <button onClick={previousPhoto}>Previous</button>
-        <button onClick={nextPhoto}>Next</button>
-        <button onClick={showColor}>Color</button>
-        <button onClick={showBlackAndWhite}>Black and White</button>
-        <button onClick={addSepia}>Sepia</button>
-        <button onClick={removeSepia}>No Sepia</button>
-        <button onClick={showFirst}>First</button>
-        <button onClick={showSecond}>Second</button>
-        <button onClick={showThird}>Third</button>
-        <button onClick={resetHero}>Reset</button>
+        <PhotoControls
+          onNext={nextPhoto}
+          onPrevious={previousPhoto}
+          onColor={showColor}
+          onBlackAndWhite={showBlackAndWhite}
+        />
+      
       </p>
     </div>
   )

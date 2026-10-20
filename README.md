@@ -5,7 +5,7 @@
 | `DataPlaylistPortfolioCard` | one project: its name, description, and two links | variables inside the component | its likes | |  |  `ClickLabPortfolioCard`
 | `GreetingCardGeneratorPortfolioCard` | one project: its name, description, and two links | variables inside the component | its likes |  
 |  `ClickLabPortfolioCard`
-one project: its name, description, and two links | variables inside the component | its likes |
+one project: its name, description, and two links | variables inside the component | its likes | `PhotoControls` | the hero's buttons | `Hero` | - | `onNext`, `onPrevious`, `onColor`, `onBlackAndWhite` |
 
 
 
